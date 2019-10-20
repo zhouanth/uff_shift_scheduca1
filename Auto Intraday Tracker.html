@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<title>Redirecting to CSSM Intraday Tracker</title>
+<h2>Intraday Tracker</h2>
+
+<h3>Loads Intraday Tracker with today's date and UFF_UCA1, UFF_UCA1_Gold, and FC/Delivery</h3>
+
+<script>
+ var date = new Date();
+ var y = date.getFullYear(); 
+ var m = date.getMonth() +1; 
+ if(m < 10){m = '0' + m;}
+ var d = date.getDate();
+ if(d < 10){d = '0' + d;}
+ var date = y + "-" + m + "-" + d;
+ var url= "https://prime-now-ops.amazon.com/tools/intraday_tracker?activity_day=" + date + "&commit=Apply+Filter&fc=UCA1&selected_workgroups%5B%5D=UFF_UCA1&selected_workgroups%5B%5D=UFF_UCA1_Gold&selected_workgroups%5B%5D=FC%2FDelivery&selected_workgroups%5B%5D=FC%2FDelivery_Gold&utf8=✓"; 
+ window.location = url;
+</script>
+
+</body>
+</html>
